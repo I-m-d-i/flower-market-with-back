@@ -11,6 +11,7 @@ import (
 func main() {
 	env.Urldb = os.Getenv("DATABASE_URL")
 	env.AdminPhone = os.Getenv("ADMIN_PHONE")
+	env.Port = os.Getenv("PORT")
 	//urldb := "postgresql://gardenia:BPDTnxIcT7qmoRQrL4ILmhrsfPTZaSy0@dpg-cprddgdumphs73c3i4sg-a.oregon-postgres.render.com/gardenia"
 
 	// Connect to database
@@ -25,5 +26,5 @@ func main() {
 	}
 
 	// Start web server
-	web.StartGin(":80")
+	web.StartGin(":" + env.Port)
 }
