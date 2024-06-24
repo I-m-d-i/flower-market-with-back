@@ -78,6 +78,13 @@ export default {
         <span>ГОРОД: {{user.customer_city}}</span><br/>
         <span>ТОВАРЫ: {{productsNameList.join('\n')}}</span><br/>
     </div>
+    <img style="width: 60vw;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 600px;" alt="flowers-home"
+         :src="require('@/assets/flowers-home.png')"/>
   </div>
 </template>
 

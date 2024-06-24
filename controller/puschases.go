@@ -16,7 +16,7 @@ type PurchaseAdmin struct {
 	PurchaseItems []model.PurchaseItem `json:"purchase_items"`
 }
 
-func GetPurchasesAdmin() ([]model.Purchase, error) {
+func GetPurchasesAdmin() ([]PurchaseAdmin, error) {
 	purchases, err := model.GetPurchases()
 	if err != nil {
 		log.Println(err)
@@ -46,7 +46,7 @@ func GetPurchasesAdmin() ([]model.Purchase, error) {
 		purchaseAdmin.CustomerPhone = customer.CustomerPhone
 		purchasesAdmin = append(purchasesAdmin, purchaseAdmin)
 	}
-	return purchases, nil
+	return purchasesAdmin, nil
 }
 
 func AddPurchase(token string, storeId int, productsId []int) (model.Purchase, error) {

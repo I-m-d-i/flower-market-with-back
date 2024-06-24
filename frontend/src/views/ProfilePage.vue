@@ -31,7 +31,7 @@ export default {
     <div class="profile_body">
       <div class="profile_header">
         <img class="profile_img" :src="require('@/assets/user icon.png')"/>
-        <span class="profile_name">{{ user?.name }}</span>
+        <span class="profile_name">{{ user?.customer_name }}</span>
 
       </div>
       <div class="profile_menu">
