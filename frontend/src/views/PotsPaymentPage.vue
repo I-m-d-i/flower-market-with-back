@@ -78,12 +78,7 @@ export default {
         <span>ГОРОД: {{user.customer_city}}</span><br/>
         <span>ТОВАРЫ: {{productsNameList.join('\n')}}</span><br/>
     </div>
-    <img style="width: 60vw;
-    z-index: -1;
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: 600px;" alt="flowers-home"
+    <img style="width: 60vw;    z-index: -1;position: absolute;right: 0;bottom: -70px;max-width: 600px;" alt="flowers-home"
          :src="require('@/assets/flowers-home.png')"/>
   </div>
 </template>
@@ -95,7 +90,6 @@ export default {
   border-radius: 51px;
   background: rgba(238, 207, 207, 0.42);
   width: 100%;
-  max-width: 1376px;
   height: 283px;
   flex-shrink: 0;
   padding: 15px 60px 30px 40px;

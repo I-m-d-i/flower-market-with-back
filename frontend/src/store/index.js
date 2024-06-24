@@ -224,14 +224,6 @@ export default createStore({
         auth(state) {
             state.user.timeLogin = Date.now()
         },
-        logout(state) {
-            state.user = {
-                name: '',
-                phone: '',
-                city: '',
-                timeLogin: 0,
-            }
-        },
         clearBasket(state) {
             state.basket = []
         },
@@ -248,8 +240,6 @@ export default createStore({
             axios.postForm('/api/customer/register', user).then((r)=>{
                 console.log(r);
             })
-            state.user = user
-            state.user.timeLogin = Date.now()
         },
         editName(state, name) {
             state.user.name = name
@@ -274,13 +264,11 @@ export default createStore({
         auth({commit}) {
             commit('auth')
         },
-        logout({commit}) {
-            commit('logout')
+        logout() {
+            axios.post("/api/customer/logout",{},{withCredentials:true})
         },
         registration({commit}, user) {
-            /*
-            запрос на регистрацию
-            */
+
             commit('register', user)
         },
         editName({commit}, name) {

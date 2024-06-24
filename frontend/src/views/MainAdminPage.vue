@@ -28,7 +28,7 @@ export default {
 <template>
 <div class="d-flex flex-row" style="height: 100vmax;width: 100%">
   <v-tabs class="sel-item" bg-color="#CDC3CE" style="width: 330px;height: 100%;padding-left:30px" v-model="tab" direction="vertical">
-    <v-tab style="font-weight: 400;text-transform: none;" text="Консоль" value="0"><img :src="require('@/assets/console.png')"/>Консоль</v-tab>
+    <v-tab style="font-weight: 400;text-transform: none;" text="Консоль" value="0"><img style="width:36px;height: 30px" :src="require('@/assets/console.png')"/>Консоль</v-tab>
     <v-tab style="font-weight: 400;text-transform: none;" text="Общие" value="1"/>
     <v-tab style="font-weight: 400;text-transform: none;" text="Внешний вид" value="2"/>
     <v-tab style="font-weight: 400;text-transform: none;" text="Заказы" value="3"/>

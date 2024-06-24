@@ -1,9 +1,23 @@
 <script>
+import axios from "axios";
+
 export default {
   name: "AuthPage",
+  data() {
+    return {
+      user: null,
+    }
+  },
+  mounted() {
+    axios.get("/api/customer/profile",{withCredentials:true}).then((r)=>{
+      this.user = r.data
+    }).catch((e)=>{
+      console.log(e)
+    })
+  },
   computed: {
     phone() {
-      return this.$store.getters.getUser.phone
+      return this.user.customer_phone
     }
   }
 }
